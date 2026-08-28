@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>비디오 태그</title>
+    <!-- 내부 스타일시트 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .video-container {
+        width: 860px;
+      }
+      .video-container video {
+        width: 100%;
+        /* object-fit: contain; */
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="video-container">
+      <!-- <video src="assets/videos/main video.mp4" controls></video> -->
+      <video muted autoplay loop playsinline>
+        <source src="assets/videos/main video.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </body>
+</html>
