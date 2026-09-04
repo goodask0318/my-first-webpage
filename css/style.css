@@ -30,7 +30,7 @@ body {
   /* line-height: 160%; */
   /* letter-spacing: -0.02em; */
   color: #000;
-  /* background-color: #fff; */
+  background-color: #fff;
 }
 
 /* 그룹 선택자 */
@@ -46,7 +46,6 @@ img {
   border: 0;
   vertical-align: middle;
 }
-
 button {
   margin: 0;
   padding: 0;
@@ -54,6 +53,7 @@ button {
   background: none;
   cursor: pointer;
 }
+
 /* 공통 스타일 */
 /* 클래스 선택자: "."으로 시작 */
 .wrap {
@@ -70,9 +70,7 @@ section {
   width: 100%;
   max-width: 928px;
   height: 100%;
-  background-color: #fff;
-
-  /* inner */
+  /* background-color: #fff; */
 }
 
 /* 헤더 영역 시작 */
@@ -88,14 +86,15 @@ section {
   justify-content: center;
   align-items: center;
 }
+
 .header .inner {
-  /*헤더안에 있는 이너만 적용하겠다.*/
   /* Auto layout */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 4px 0px 8px;
 }
+
 .logo {
   display: block;
   width: 139px;
@@ -132,7 +131,7 @@ section {
   width: 24px;
   height: 24px;
   /* background-color: aqua; */
-  background-image: url("../assets/icon/main_black_ico.png");
+  background-image: url("../assets/icons/main_black_ico.png");
   /* background-repeat: repeat-y; */
   background-repeat: no-repeat;
   background-position: center;
@@ -158,16 +157,17 @@ section {
 }
 .main-pick-bubble {
 }
-
 .main-search {
   width: 32px;
   height: 32px;
-  /* background-image: url("../assets/icon/search_btn_bk.png"); */
+  /* background-image: url("../assets/icons/search_btn_bk.png"); */
   /* background-repeat: no-repeat; */
   /* background-position: center; */
-  background: url("../assets/icon/search_btn_bk.png") no-repeat center;
+  /* background-size: contain; */
+  background: url("../assets/icons/search_btn_bk.png") no-repeat center;
   background-size: contain;
 }
+
 /* 헤더 영역 끝 */
 
 /* 메인 영역 시작 */
@@ -179,7 +179,6 @@ section {
 .hero {
   width: 100%;
   height: 658px;
-
   /* background-color: violet; */
 }
 .hero .main-visual {
@@ -194,8 +193,9 @@ section {
   right: 0;
   top: -16px;
   display: block;
-  /* width: 100px; */
+  /* width: 100%; */
   height: 20px;
+  /* background-color: brown; */
   background-color: #fff;
   z-index: 1;
 }
@@ -208,7 +208,7 @@ section {
   display: block;
   /* width: 100%; */
   height: 123px;
-  background: url("../assets/images/bg_wave.png") no-repeat center;
+  /* background: url("../assets/images/bg_wave.png") no-repeat center; */
   background-size: contain;
   z-index: 1;
 }
@@ -219,12 +219,12 @@ section {
   height: 100%;
   background: url("../assets/images/slide_3.jpg") no-repeat center;
   background-size: cover;
-  /*  Figma: Effect -> Layer blur */
+  /* Figma: Effect -> Layer blur */
   filter: blur(3px);
 }
 .hero .main-visual .main-visual-bg::after {
-  position: absolute;
   content: "";
+  position: absolute;
   left: 0;
   right: 0;
   top: 0;
@@ -242,21 +242,20 @@ section {
   width: 100%;
   height: 100%;
   max-width: 1320px;
-  /* background-color: #456789; */
+  /* background-color: #d9d9d9; */
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* swiper 라이브러리로 대체 */
-.swiper-container {
+/* Swiper 라이브러리로 대체 */
+.sw-hero {
   position: relative;
   width: 100%;
   height: 100%;
   max-width: 1088px;
   /* background-color: #fff; */
 }
-
 .swiper-slide {
   position: relative;
   width: 100%;
@@ -282,7 +281,6 @@ section {
   flex: 1;
   padding-top: 110px;
 }
-
 .slide-title {
   position: relative;
   margin-bottom: 24px;
@@ -301,8 +299,8 @@ section {
   background-color: #7a45e5;
   font-weight: 700;
   color: #fff;
-  border-radius: 30px;
-  /* letter-spacing: 0; */
+  border-radius: 25px;
+  letter-spacing: 0;
 }
 .location {
   position: relative;
@@ -315,12 +313,11 @@ section {
   width: 15px;
   height: 18px;
   object-fit: contain;
-  vertical-align: -2px;
 }
 .location span {
   font-size: 18px;
-  /* letter-spacing: 0; */
   color: #fff;
+  /* letter-spacing: 0; */
 }
 .slide-title-head {
   font-size: 40px;
@@ -337,6 +334,7 @@ section {
   font-size: 18px;
   color: #fff;
 }
+
 .explain {
   position: relative;
   display: flex;
@@ -359,44 +357,53 @@ section {
   height: 1px;
   background-color: #fff;
 }
-.prev-btn {
-  position: relative;
+
+.hero-prev-btn {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
   width: 64px;
   height: 64px;
+  z-index: 10;
 }
-.prev-btn img {
+.hero-prev-btn img {
   position: absolute;
   left: 0;
-  right: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  opacity: 0;
+  /* opacity: 0; */
 }
 
-.next-btn {
-  position: relative;
+.hero-next-btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
   width: 64px;
   height: 64px;
+  z-index: 10;
 }
-.next-btn img {
+.hero-next-btn img {
   position: absolute;
   left: 0;
-  right: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  opacity: 0;
+  /* opacity: 0; */
 }
-.prev-btn .on,
-.next-btn .on {
-  opacity: 1;
+.hero-prev-btn .on,
+.hero-next-btn .on {
+  /* opacity: 1; */
 }
-
-.prev-btn .off,
-.next-btn .off {
+/* .hero-prev-btn .off,
+.hero-next-btn .off {
   opacity: 0.35;
-}
+} */
+
 .keywords {
   width: 100%;
   height: 85px;
