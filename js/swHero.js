@@ -5,7 +5,7 @@ const mainVisualBg = document.querySelector(
 const heroBtns = document.querySelectorAll(".visual-inner .sw-hero-btn");
 // console.log(heroBtns);
 
-const playStopbth = document.querySelector(
+const playStopbtn = document.querySelector(
   ".sw-hero .pagination .play-stop-btn",
 );
 //히어로 슬라이드 버튼 호버 인터랙션
@@ -51,7 +51,7 @@ const swHero = new Swiper(".sw-hero", {
 });
 
 //재생, 정지버튼
-playStopbth.addEventListener("click", () => {
+playStopbtn.addEventListener("click", () => {
   // swHero.autoplay.stop();
   // console.log("슬라이드 자동정지 재생");
   const isRunning = swHero.autoplay.running;
@@ -59,8 +59,10 @@ playStopbth.addEventListener("click", () => {
   if (isRunning) {
     swHero.autoplay.stop();
     console.log("자동재생 정지");
+    playStopbtn.style.backgroundImage = `url(assets/icon/slide_play.png)`;
   } else {
     swHero.autoplay.start();
     console.log("자동정지 재생");
+    playStopbtn.style.backgroundImage = `url(assets/icon/slide_stop.png)`;
   }
 });
