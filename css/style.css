@@ -131,7 +131,7 @@ section {
   width: 24px;
   height: 24px;
   /* background-color: aqua; */
-  background-image: url("../assets/icons/main_black_ico.png");
+  background-image: url("../assets/icon/main_black_ico.png");
   /* background-repeat: repeat-y; */
   background-repeat: no-repeat;
   background-position: center;
@@ -173,7 +173,7 @@ section {
 /* 메인 영역 시작 */
 .main {
   width: 100%;
-  background-color: wheat;
+  /* background-color: wheat; */
 }
 
 .hero {
@@ -208,8 +208,8 @@ section {
   display: block;
   /* width: 100%; */
   height: 123px;
-  /* background: url("../assets/images/bg_wave.png") no-repeat center; */
-  background-size: contain;
+  background: url("../assets/images/bg_wave.png") no-repeat center;
+  background-size: 100% 100%;
   z-index: 1;
 }
 
@@ -296,12 +296,13 @@ section {
   align-items: center;
   justify-content: center;
   width: fit-content;
+  background-color: #7a45e5;
   padding: 0 20px;
   height: 36px;
-  background-color: #7a45e5;
   font-weight: 700;
   color: #fff;
-  border-radius: 25px;
+  border-radius: 30px;
+  /* 18만 넘기믄됨 */
   letter-spacing: 0;
 }
 .location {
@@ -319,18 +320,18 @@ section {
 .location span {
   font-size: 18px;
   color: #fff;
-  /* letter-spacing: 0; */
 }
 .slide-title-head {
   font-size: 40px;
   font-weight: 800;
   color: #fff;
-  /* letter-spacing: 0; */
 }
 
 .main-schedule {
   position: relative;
   margin-bottom: 20px;
+  color: #fff;
+  font-size: 18px;
 }
 .main-schedule span {
   font-size: 18px;
@@ -351,6 +352,7 @@ section {
   align-items: center;
   gap: 8px;
   color: #fff;
+  font-weight: 500;
 }
 .explain li::before {
   content: "";
@@ -363,8 +365,8 @@ section {
 .hero-prev-btn {
   position: absolute;
   top: 50%;
-  left: 0;
   transform: translateY(-50%);
+  left: 0;
   width: 64px;
   height: 64px;
   z-index: 10;
@@ -382,8 +384,8 @@ section {
 .hero-next-btn {
   position: absolute;
   top: 50%;
-  right: 0;
   transform: translateY(-50%);
+  right: 0;
   width: 64px;
   height: 64px;
   z-index: 10;
@@ -418,30 +420,89 @@ section {
   left: calc(50% + 140px);
   top: 465px;
   z-index: 100;
-  transform: (-50%);
+  transform: translateX(-50%);
   display: flex;
   gap: 8px;
   align-items: center;
 }
 .sw-hero .pagination .play-stop-btn {
-  position: relative;
   width: 30px;
   height: 30px;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-image: url("../assets/icon/slide_stop.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 8px 10px;
+  background: rgba(0, 0, 0, 0.5) url("../assets/icon/slide_stop.png") no-repeat
+    center;
+  background-size: 8px 12px;
   text-indent: -9999px;
   border-radius: 50%;
-  border: none;
-  cursor: pointer;
+}
+.sw-hero .pagination .swiper-pagination {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 65px;
+  height: 30px;
+  border-radius: 30px;
+  font-size: 14px;
+  color: #fff;
+}
+.sw-hero .pagination .swiper-pagination .swiper-pagination-current {
+  /* color: #fff; */
+  font-weight: 700;
+}
+.sw-hero .pagination .swiper-pagination .swiper-pagination-total {
+  /* color: #fff; */
 }
 
 .keywords {
+  position: relative;
   width: 100%;
   height: 85px;
-  background-color: yellow;
+  /* background-color: yellow; */
+}
+.keywords .inner {
+  position: relative;
+}
+.keywords .keywords-wrap {
+  position: absolute;
+  top: -20px;
+  bottom: 0;
+  z-index: 10;
+}
+.keywords .keywords-wrap .keywords-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+  letter-spacing: -0.5px;
+}
+.keywords .keywords-wrap .keywords-title em {
+  font-weight: 400;
+  font-style: normal;
+}
+.keywords .keywords-wrap ul {
+  position: relative;
+  margin-top: 27px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.keywords .keywords-wrap ul li {
+  position: relative;
+}
+.keywords .keywords-wrap ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 16px;
+  color: #80808a;
+  border: 1px solid #80808a;
+  border-radius: 20px;
+}
+.keywords .keywords-wrap ul li:hover a {
+  background-color: #7a45e5;
+  color: #fff;
 }
 .rank {
   width: 100%;
