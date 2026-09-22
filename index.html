@@ -26,6 +26,8 @@
     <!-- JS -->
     <script src="js/script.js" defer></script>
     <script src="js/swHero.js" defer></script>
+    <script src="js/swFestival.js" defer></script>
+    <script src="js/swBanner.js" defer></script>
   </head>
 
   <body>
@@ -52,7 +54,7 @@
               <div class="nav-pick">
                 <button class="main-pick" aria-label="찜하기 버튼">
                   <img
-                    src="assets/icon/icon_pick_off.png"
+                    src="assets/icons/icon_pick_off.png"
                     alt="찜하기 버튼 아이콘"
                   />
                 </button>
@@ -94,7 +96,7 @@
                           </div>
                           <!-- <div class="location">
                             <img
-                              src="assets/icon/icon_location.png"
+                              src="assets/icons/icon_location.png"
                               alt="장소 아이콘"
                             />
                             <span>전북특별자치도 무주군</span>
@@ -139,7 +141,7 @@
                           </div>
                           <!-- <div class="location">
                             <img
-                              src="assets/icon/icon_location.png"
+                              src="assets/icons/icon_location.png"
                               alt="장소 아이콘"
                             />
                             <span>전북특별자치도 무주군</span>
@@ -179,7 +181,7 @@
                           </div>
                           <div class="location">
                             <img
-                              src="assets/icon/icon_location.png"
+                              src="assets/icons/icon_location.png"
                               alt="장소 아이콘"
                             />
                             <span>전북특별자치도 무주군</span>
@@ -213,7 +215,7 @@
                           </div>
                           <div class="location">
                             <img
-                              src="assets/icon/icon_location.png"
+                              src="assets/icons/icon_location.png"
                               alt="장소 아이콘"
                             />
                             <span>강원특별자치도 평창군</span>
@@ -247,7 +249,7 @@
                           </div>
                           <div class="location">
                             <img
-                              src="assets/icon/icon_location.png"
+                              src="assets/icons/icon_location.png"
                               alt="장소 아이콘"
                             />
                             <span>전북특별자치도 장수군</span>
@@ -286,7 +288,7 @@
                           </div>
                           <!-- <div class="location">
                             <img
-                              src="assets/icon/icon_location.png"
+                              src="assets/icons/icon_location.png"
                               alt="장소 아이콘"
                             />
                             <span>전북특별자치도 무주군</span>
@@ -335,7 +337,7 @@
               <button class="hero-prev-btn sw-hero-btn">
                 <img
                   class="off"
-                  src="assets/images/pre_on_btn.png "
+                  src="assets/images/pre_on_btn.png"
                   alt="이전 버튼"
                 />
                 <img
@@ -350,7 +352,7 @@
         <section class="keywords">
           <div class="inner">
             <div class="keywords-wrap">
-              <h2 class="keywords-title">
+              <h2 class="section-title">
                 <em>추천 축제</em>
                 키워드
               </h2>
@@ -366,16 +368,248 @@
           </div>
         </section>
         <section class="rank">
-          <div class="inner">사람들이 많이 본 축제 영역</div>
+          <div class="rank-wrap">
+            <div class="inner">
+              <h2 class="section-title">
+                <em>사람들이</em>
+                <br />
+                많이 본 축제
+              </h2>
+
+              <div class="rank-list-wrap">
+                <ul>
+                  <li>
+                    <span class="num medal gold">1</span>
+                    <a href="#">홍성남당항 대하축제</a>
+                  </li>
+                  <li>
+                    <span class="num medal silver">2</span>
+                    <a href="#">무주반딧불축제</a>
+                  </li>
+                  <li>
+                    <span class="num medal bronze">3</span>
+                    <a href="#">경복궁 별빛야행</a>
+                  </li>
+                  <li>
+                    <span class="num">4</span>
+                    <a href="#">왜관 홀리 페스티벌</a>
+                  </li>
+                  <li>
+                    <span class="num">5</span>
+                    <a href="#">평창효석문화제</a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <span class="num">6</span>
+                    <a href="#">서울라이트 DDP 가을</a>
+                  </li>
+                  <li>
+                    <span class="num">7</span>
+                    <a href="#">진주남강유등축제</a>
+                  </li>
+                  <li>
+                    <span class="num">8</span>
+                    <a href="#">무안 황토 갯벌축제</a>
+                  </li>
+                  <li>
+                    <span class="num">9</span>
+                    <a href="#">직지문화축제</a>
+                  </li>
+                  <li>
+                    <span class="num">10</span>
+                    <a href="#">공주 국가유산여행</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </section>
         <section class="festival">
-          <div class="inner">지역 축제 슬라이드 영역</div>
+          <div class="festival-wrap">
+            <div class="festival-title">
+              <h2 class="section-title">
+                지역축제<em>를<br />만나보세요!</em>
+              </h2>
+              <a class="more-btn" href="#">+ More</a>
+            </div>
+            <!-- Swiper -->
+            <div class="pagination">
+              <button class="festival-prev-btn">이전</button>
+              <div class="swiper-pagination"></div>
+              <button class="festival-next-btn">다음</button>
+            </div>
+            <div class="festival-slide">
+              <div class="swiper sw-festival">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img
+                        src="assets/images/local-fev-slide-1.jpg"
+                        alt="글로컬 남산 페스티벌"
+                      />
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img
+                        src="assets/images/local-fev-slide-2.png"
+                        alt="처인성 문화제"
+                      />
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img
+                        src="assets/images/local-fev-slide-3.jpg"
+                        alt="뚜벅뚜벅 여행"
+                      />
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img
+                        src="assets/images/local-fev-slide-4.jpg"
+                        alt="근대도시 대전 중구 야행"
+                      />
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img
+                        src="assets/images/local-fev-slide-1.jpg"
+                        alt="글로컬 남산 페스티벌"
+                      />
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img
+                        src="assets/images/local-fev-slide-2.png"
+                        alt="처인성 문화제"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         <section class="alio">
-          <div class="inner">먹거리 알리오 영역</div>
+          <div class="inner">
+            <div class="title-wrap">
+              <h2 class="section-title">
+                <em>축제의 꽃!</em>
+                먹거리 알리오
+              </h2>
+              <a class="more-btn" href="#">+ More</a>
+            </div>
+            <div class="card-wrap">
+              <ul>
+                <li>
+                  <a href="#" class="alio-card">
+                    <div class="img-wrap">
+                      <img
+                        src="assets/icons/icon_alio.png"
+                        alt="알리오 아이콘"
+                      />
+                      <span class="img">
+                        <img
+                          src="assets/images/alio-slide-1.jpg"
+                          alt="함평모악산 꽃무릇축제"
+                        />
+                      </span>
+                    </div>
+                    <div class="text-wrap">
+                      <strong>함평모악산 꽃무릇축제</strong>
+                      <span class="date">2026.09.16 ~ 2026.09.20</span>
+                      <span class="location">전남광주통합특별시 함평군</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="alio-card">
+                    <div class="img-wrap">
+                      <img
+                        src="assets/icons/icon_alio.png"
+                        alt="알리오 아이콘"
+                      />
+                      <span class="img">
+                        <img
+                          src="assets/images/alio-slide-2.jpg"
+                          alt="음성명작페스티벌"
+                        />
+                      </span>
+                    </div>
+                    <div class="text-wrap">
+                      <strong>음성명작페스티벌</strong>
+                      <span class="date">2026.09.17 ~ 2026.09.20</span>
+                      <span class="location">충청북도 음성군</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="alio-card">
+                    <div class="img-wrap">
+                      <img
+                        src="assets/icons/icon_alio.png"
+                        alt="알리오 아이콘"
+                      />
+                      <span class="img">
+                        <img
+                          src="assets/images/alio-slide-3.jpg"
+                          alt="경산 갓바위소원성취축제"
+                        />
+                      </span>
+                    </div>
+                    <div class="text-wrap">
+                      <strong>경산 갓바위소원성취축제</strong>
+                      <span class="date">2026.09.19 ~ 2026.09.20</span>
+                      <span class="location">경산북도 경산시</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="alio-card">
+                    <div class="img-wrap">
+                      <img
+                        src="assets/icons/icon_alio.png"
+                        alt="알리오 아이콘"
+                      />
+                      <span class="img">
+                        <img
+                          src="assets/images/alio-slide-4.jpeg"
+                          alt="평창농악·산골푸드축제"
+                        />
+                      </span>
+                    </div>
+                    <div class="text-wrap">
+                      <strong>평창농악·산골푸드축제</strong>
+                      <span class="date">2026.09.18 ~ 2026.09.20</span>
+                      <span class="location">강원특별자치도 평창군</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </section>
         <section class="banner">
-          <div class="inner">배너 슬라이드 영역</div>
+          <div class="inner">
+            <!-- Swiper -->
+            <div class="pagination">
+              <button class="banner-prev-btn">이전</button>
+              <div class="swiper-pagination"></div>
+              <button class="play-stop-btn">정지</button>
+              <button class="banner-next-btn">다음</button>
+            </div>
+
+            <div class="swiper sw-banner">
+              <div class="swiper-wrapper">
+                <!-- swBanner.js 에서 동적으로 swiper-slide 생성 -->
+              </div>
+            </div>
+          </div>
         </section>
         <section class="theme">
           <div class="inner">테마 축제 영역</div>

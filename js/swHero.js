@@ -4,22 +4,22 @@ const mainVisualBg = document.querySelector(
 // console.log(mainVisualBg);
 const heroBtns = document.querySelectorAll(".visual-inner .sw-hero-btn");
 // console.log(heroBtns);
-
-const playStopbtn = document.querySelector(
+const playStopBtn = document.querySelector(
   ".sw-hero .pagination .play-stop-btn",
 );
-//히어로 슬라이드 버튼 호버 인터랙션
+// console.log(playStopBtn);
+
+// 히어로 슬라이드 버튼 호버 인터랙션
 heroBtns.forEach((btn) => {
   btn.addEventListener("mouseenter", () => {
-    // btn.querySelector(".on").style.opacity = 0;
     btn.querySelector(".off").style.opacity = 1;
   });
-  btn.addEventListener("mouseout", () => {
-    // btn.querySelector(".on").style.opacity = 0;
+  btn.addEventListener("mouseleave", () => {
     btn.querySelector(".off").style.opacity = 0;
   });
 });
 
+// 스와이퍼 설정
 const swHero = new Swiper(".sw-hero", {
   speed: 1000,
   autoplay: {
@@ -27,7 +27,7 @@ const swHero = new Swiper(".sw-hero", {
     disableOnInteraction: false,
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".sw-hero .swiper-pagination",
     type: "fraction",
   },
   navigation: {
@@ -50,21 +50,22 @@ const swHero = new Swiper(".sw-hero", {
   },
 });
 
-//재생, 정지버튼
-playStopbtn.addEventListener("click", () => {
-  // swHero.autoplay.stop();
-  // console.log("슬라이드 자동정지 재생");
+// 재생, 정지 버튼
+playStopBtn.addEventListener("click", () => {
+  // console.log("슬라이드 자동재생 정지");
+
   const isRunning = swHero.autoplay.running;
-  // console.log("isRunning");
+  // console.log(isRunning);
+
   if (isRunning) {
     swHero.autoplay.stop();
     console.log("자동재생 정지");
-    playStopbtn.style.backgroundImage = `url(assets/icon/slide_play.png)`;
-    playStopbtn.textContent = "재생";
+    playStopBtn.style.backgroundImage = `url(assets/icons/slide_play.png)`;
+    playStopBtn.textContent = "재생";
   } else {
     swHero.autoplay.start();
-    console.log("자동정지 재생");
-    playStopbtn.style.backgroundImage = `url(assets/icon/slide_stop.png)`;
-    playStopbtn.textContent = "정지";
+    console.log("자동재생 시작");
+    playStopBtn.style.backgroundImage = `url(assets/icons/slide_stop.png)`;
+    playStopBtn.textContent = "정지";
   }
 });
